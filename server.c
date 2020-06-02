@@ -62,7 +62,8 @@ int main(int argc, char *argv[]) {
                 message = "Congratulations! You're answer is Right!";
                 write(new_socket, message, strlen(message) + 1);
                 return 1;
-            } else {
+            }
+            else {
                 sprintf(reAB, "%dA%dB", A, B);
                 write(new_socket, reAB, strlen(reAB) + 1);
             }
