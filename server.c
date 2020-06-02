@@ -10,6 +10,7 @@ int main(int argc, char *argv[])
     int socket_desc, new_socket, c;
     struct sockaddr_in server, client;
     char *message;
+    
     socket_desc = socket(AF_INET, SOCK_STREAM, 0);
     if (socket_desc == -1) {
         printf("Could not create socket");
@@ -37,5 +38,6 @@ int main(int argc, char *argv[])
     timeinfo = localtime(&now);
     message = asctime(timeinfo);
     write(new_socket, message, strlen(message));
+    
     return 0;
 }
