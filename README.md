@@ -1,3 +1,9 @@
-# 2016_MCU_Course
-Using Github for the first time.  
-See more from branches.  
+# Lab03
+Task:
+
+1. 在 GitHub 產生一新的 repo, 命名為 LAB03, 並在其中建立一個 C 程式檔
+2. 在螢幕上顯示: "請輸入十個數字, 用空格隔開"
+3. 用 scanf 取得十個整數
+4. 在螢幕顯示: "您輸入的數字為:"
+5. 接著每一行輸出一個整數值
+6. 編譯並執行
