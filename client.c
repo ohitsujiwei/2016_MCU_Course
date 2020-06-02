@@ -4,12 +4,11 @@
 #include <sys/socket.h>
 #include <arpa/inet.h>
 
-
 int main(int argc, char *argv[]) {
     int socket_desc;
     struct sockaddr_in server;
     char message[1000], server_reply[2000];
-    
+
     socket_desc = socket(AF_INET, SOCK_STREAM, 0);
     if (socket_desc == -1) {
         printf("Could not create socket");
@@ -26,17 +25,17 @@ int main(int argc, char *argv[]) {
         return 1;
     }
     puts("Connected\n");
-    while(1) {
+    while (1) {
         fgets(message, sizeof(message), stdin);
-        if (send(socket_desc, message, strlen(message), 0) < 0)     {
+        if (send(socket_desc, message, strlen(message), 0) < 0) {
             puts("Send failed");
             return 1;
         }
-        if (recv(socket_desc, server_reply, 2000, 0) < 0)     {
+        if (recv(socket_desc, server_reply, 2000, 0) < 0) {
             puts("recv failed");
         }
         puts(server_reply);
     }
-    
+
     return 0;
 }
